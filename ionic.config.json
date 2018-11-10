@@ -1,0 +1,7 @@
+{
+  "name": "biologia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
