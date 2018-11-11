@@ -7,10 +7,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { QuizMenuPage } from '../pages/quiz-menu/quiz-menu';
+import { QuizPage } from '../pages/quiz/quiz';
+import { QuizResultPage } from '../pages/quiz-result/quiz-result';
+
+import { QuizService } from '../services/quiz';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    QuizMenuPage,
+    QuizPage,
+    QuizResultPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +28,16 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    QuizMenuPage,
+    QuizPage,
+    QuizResultPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    QuizService
   ]
 })
 export class AppModule {}

@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Quiz-Menu
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 text-center>Quizes</h3>
+    <ion-card *ngFor="let quiz of quizes; let i = index"
+        [navPush]="quizPage" [navParams]="quiz">
+        <img src="">
+        <ion-card-content>
+            <ion-card-title>
+                {{ quiz.titulo }}
+            </ion-card-title>
+            <p>
+                {{ quiz.titulo }}
+            </p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

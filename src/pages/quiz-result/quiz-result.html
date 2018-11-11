@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Resultado
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3>Resultado</h3>
+    <h4>Acertos: {{ correctAnswers }} / {{ answerCount }}</h4>
+    <button ion-button full (click)="finish()">FIM</button>
+</ion-content>
