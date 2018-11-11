@@ -11,7 +11,11 @@ import { QuizMenuPage } from '../pages/quiz-menu/quiz-menu';
 import { QuizPage } from '../pages/quiz/quiz';
 import { QuizResultPage } from '../pages/quiz-result/quiz-result';
 
+import { TutorialMenuPage } from '../pages/tutorial-menu/tutorial-menu';
+import { TutorialPage } from '../pages/tutorial/tutorial';
+
 import { QuizService } from '../services/quiz';
+import { TutorialService } from '../services/tutorial';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { QuizService } from '../services/quiz';
     HomePage,
     QuizMenuPage,
     QuizPage,
-    QuizResultPage
+    QuizResultPage,
+    TutorialMenuPage,
+    TutorialPage
   ],
   imports: [
     BrowserModule,
@@ -31,13 +37,16 @@ import { QuizService } from '../services/quiz';
     HomePage,
     QuizMenuPage,
     QuizPage,
-    QuizResultPage
+    QuizResultPage,
+    TutorialMenuPage,
+    TutorialPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QuizService
+    QuizService,
+    TutorialService
   ]
 })
 export class AppModule {}

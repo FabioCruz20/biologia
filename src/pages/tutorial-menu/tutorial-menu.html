@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Tutoriais
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let tutorial of tutorials; let i = index"
+        [navPush]="tutorialPage" [navParams]="tutorial">
+        <img width="200" height="200" src="../../assets/imgs/horta.gif">
+        <ion-card-content>
+            <ion-card-title>
+                {{ tutorial.titulo }}
+            </ion-card-title>
+            <p>
+                {{ tutorial.descricao }}
+            </p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
