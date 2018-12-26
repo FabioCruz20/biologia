@@ -1,1 +1,33 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="nav">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item icon-left (click)="onLoad(rootPage)"
+                *ngIf="isAuthenticated">
+                <ion-icon name="game-controller-a"></ion-icon>
+                Atividades
+            </button>
+            <button ion-item icon-left (click)="onLoad(loginPage)"
+                *ngIf="!isAuthenticated">
+                <ion-icon name="key"></ion-icon>
+                Entre
+            </button>
+            <button ion-item icon-left (click)="onLoad(signupPage)"
+                *ngIf="!isAuthenticated">
+                <ion-icon name="person-add"></ion-icon>
+                Crie uma conta
+            </button>
+            <button ion-item icon-left (click)="onLogout()"
+                *ngIf="isAuthenticated">
+                <ion-icon name="exit"></ion-icon>
+                Sair
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav></ion-nav>

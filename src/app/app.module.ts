@@ -14,8 +14,19 @@ import { QuizResultPage } from '../pages/quiz-result/quiz-result';
 import { TutorialMenuPage } from '../pages/tutorial-menu/tutorial-menu';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+
 import { QuizService } from '../services/quiz';
 import { TutorialService } from '../services/tutorial';
+
+// para configurar o firestore
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { firebaseConfig } from './credentials';
+
+// serviço de autenticação.
+import { AuthService } from '../services/auth';
 
 @NgModule({
   declarations: [
@@ -25,11 +36,15 @@ import { TutorialService } from '../services/tutorial';
     QuizPage,
     QuizResultPage,
     TutorialMenuPage,
-    TutorialPage
+    TutorialPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,14 +54,17 @@ import { TutorialService } from '../services/tutorial';
     QuizPage,
     QuizResultPage,
     TutorialMenuPage,
-    TutorialPage
+    TutorialPage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     QuizService,
-    TutorialService
+    TutorialService,
+    AuthService
   ]
 })
 export class AppModule {}

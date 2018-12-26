@@ -1,12 +1,8 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-tabs>
+  <ion-tab 
+    [root]="quizMenuPage" tabIcon="help-circle" 
+    tabTitle="Quiz"></ion-tab>
 
-<ion-content padding>
-  <button ion-button full [navPush]="quizMenuPage">Quizes</button>
-  <button ion-button full [navPush]="tutorialMenuPage">Tutoriais</button>
-</ion-content>
+  <ion-tab [root]="tutorialMenuPage" tabIcon="book" 
+    tabTitle="Tutorial"></ion-tab>
+</ion-tabs>
