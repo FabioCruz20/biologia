@@ -14,7 +14,7 @@
 <ion-content padding>
     <ion-card *ngFor="let tutorial of tutorials; let i = index"
         [navPush]="tutorialPage" [navParams]="tutorial">
-        <img width="200" height="200" src="../../assets/imgs/horta.gif">
+        <img width="200" height="200" [src]="tutorial.imgUrl">
         <ion-card-content>
             <ion-card-title>
                 {{ tutorial.titulo }}

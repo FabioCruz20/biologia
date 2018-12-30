@@ -15,7 +15,7 @@
     <h3 text-center>Quizes</h3>
     <ion-card *ngFor="let quiz of quizes; let i = index"
         [navPush]="quizPage" [navParams]="quiz">
-        <img src="">
+        <img width="200" height="200" [src]="quiz.imgUrl">
         <ion-card-content>
             <ion-card-title>
                 {{ quiz.titulo }}

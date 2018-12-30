@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
 
 import { AuthService } from '../../services/auth';
 
-import { HomePage } from '../home/home';
+//import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({

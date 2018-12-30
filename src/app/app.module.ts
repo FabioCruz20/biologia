@@ -17,9 +17,6 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 
-import { QuizService } from '../services/quiz';
-import { TutorialService } from '../services/tutorial';
-
 // para configurar o firestore
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -27,6 +24,9 @@ import { firebaseConfig } from './credentials';
 
 // serviço de autenticação.
 import { AuthService } from '../services/auth';
+
+import { QuizService } from '../services/quiz';
+import { TutorialService } from '../services/tutorial';
 
 @NgModule({
   declarations: [

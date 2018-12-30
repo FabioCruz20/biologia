@@ -10,7 +10,7 @@
     <ion-slides>
         <ion-slide *ngFor="let etapa of tutorial.etapas; let i = index">
             <h4>Passo {{ i + 1 }}: {{ etapa.subtitulo }}</h4>
-            <img src="../../assets/imgs/horta.gif">
+            <img width="100" height="100" [src]="etapa.imgUrl">
             <p>{{ etapa.descricao }}</p>
             <button ion-button round icon-only (click)="previous()"
                 *ngIf="!tutorialBeginning()">

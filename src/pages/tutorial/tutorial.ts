@@ -16,7 +16,9 @@ export class TutorialPage implements OnInit {
     constructor(private navParams: NavParams) {}
 
     ngOnInit() {
+        console.log(this.navParams.data);
         this.tutorial = this.navParams.data;
+        //console.log(this.tutorial);
     }
 
     previous() {
